@@ -169,11 +169,11 @@ public class ListaClientes extends javax.swing.JFrame {
             }
             
             else {
-                mostrarMsj("Seleccione un cliente para borrar", "Error", "Error");
+                mostrarMsj("Seleccione un cliente para editar", "Error", "Error");
             }
         }
         else if (tablaClientes.getRowCount() == 0){
-            mostrarMsj("No hay clientes para borrar!", "Error", "Error");
+            mostrarMsj("No hay clientes para editar!", "Error", "Error");
         }
     }//GEN-LAST:event_btnEditarActionPerformed
 
