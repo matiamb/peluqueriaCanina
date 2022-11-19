@@ -283,6 +283,10 @@ public class Edicion extends javax.swing.JFrame {
     
     
     private void btnAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtrasActionPerformed
+        
+        ListaClientes clientes = new ListaClientes();
+        clientes.setVisible(true);
+        clientes.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_btnAtrasActionPerformed
 
