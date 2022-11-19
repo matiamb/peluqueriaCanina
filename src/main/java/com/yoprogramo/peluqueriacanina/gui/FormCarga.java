@@ -268,14 +268,24 @@ public class FormCarga extends javax.swing.JFrame {
         boolean alergia = checkAlergia.isSelected();
         boolean atencion = checkAtencion.isSelected();
         
-        control.guardar(nombre, raza, color, nombreduenio, celduenio, observaciones,
-                alergia, atencion);
+        if (nombre.equals("")){
+            if (raza.equals("")){
+                if(color.equals("")){
+                    if (nombreduenio.equals("")){
+                        if (celduenio.equals("")){
+                            mostrarMsj("Los datos estan vacios!","Error","Error!");
+                        }
+                    }
+                }
+            }
+        }
         
-        JOptionPane optionPane = new JOptionPane("Se guardo correctamente");
-        optionPane.setMessageType(JOptionPane.INFORMATION_MESSAGE);
-        JDialog dialog = optionPane.createDialog("Guardado Exitoso");
-        dialog.setAlwaysOnTop(true);
-        dialog.setVisible(true);
+        else {
+            control.guardar(nombre, raza, color, nombreduenio, celduenio, observaciones,
+                alergia, atencion);
+            mostrarMsj("Cliente guardado correctamente", "Info", "Guardado");
+        
+        }
         
         
     }//GEN-LAST:event_btnGuardarActionPerformed
@@ -284,6 +294,19 @@ public class FormCarga extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_btnAtrasActionPerformed
 
+    public void mostrarMsj (String mensaje, String tipo, String titulo){
+    
+        JOptionPane optionPane = new JOptionPane(mensaje);
+        if(tipo.equals("Info")){
+                optionPane.setMessageType(JOptionPane.INFORMATION_MESSAGE);}
+        else if(tipo.equals("Error")){
+                optionPane.setMessageType(JOptionPane.ERROR_MESSAGE);
+        }
+                JDialog dialog = optionPane.createDialog(titulo);
+                dialog.setAlwaysOnTop(true);
+                dialog.setVisible(true);
+        
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAtras;
