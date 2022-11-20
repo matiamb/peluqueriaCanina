@@ -4,6 +4,7 @@
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <class>com.yoprogramo.peluqueriacanina.logic.Duenio</class>
     <class>com.yoprogramo.peluqueriacanina.logic.Mascota</class>
+    <class>com.yoprogramo.peluqueriacanina.logic.Empleados</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/peluqueria_canina?serverTimezone=UTC"/>
       <property name="javax.persistence.jdbc.user" value="admin"/>

@@ -69,5 +69,16 @@ public class Controladora {
     private void modificarDuenio(Duenio duenio) {
         controlPersis.modificarDuenio(duenio);
     }
+
+    public void guardarEmpleado(String usuario, String contrasena, String email) {
+        Empleados empleado = new Empleados();
+        
+        empleado.setUsuario(usuario);
+        empleado.setContrasena(contrasena);
+        empleado.setEmail(email);
+        
+        controlPersis.guardarEmpleado(empleado);
+               
+    }
     
 }

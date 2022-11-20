@@ -1,6 +1,7 @@
 package com.yoprogramo.peluqueriacanina.persistence;
 
 import com.yoprogramo.peluqueriacanina.logic.Duenio;
+import com.yoprogramo.peluqueriacanina.logic.Empleados;
 import com.yoprogramo.peluqueriacanina.logic.Mascota;
 import com.yoprogramo.peluqueriacanina.persistence.exceptions.NonexistentEntityException;
 import java.util.List;
@@ -11,7 +12,8 @@ public class ControladoraPersistencia {
     
     DuenioJpaController duenioJpa = new DuenioJpaController();
     MascotaJpaController mascotaJpa = new MascotaJpaController();
-
+    EmpleadosJpaController empleadosJpa = new EmpleadosJpaController();
+    
     public void guardar(Duenio duenio, Mascota mascota) {
         duenioJpa.create(duenio);
         mascotaJpa.create(mascota);
@@ -51,6 +53,10 @@ public class ControladoraPersistencia {
         } catch (Exception ex) {
             Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }
+
+    public void guardarEmpleado(Empleados empleado) {
+        empleadosJpa.create(empleado);
     }
 
     
