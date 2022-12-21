@@ -57,6 +57,10 @@ public class ControladoraPersistencia {
 
     public void guardarEmpleado(Empleados empleado) {
         empleadosJpa.create(empleado);
+    }    
+
+    public void verificarUsuario(String usuario) {
+        empleadosJpa.findEmpleados(usuario);//find tiene como entrada un entero, es para buscar con id
     }
 
     

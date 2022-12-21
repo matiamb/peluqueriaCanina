@@ -79,6 +79,10 @@ public class Controladora {
         
         controlPersis.guardarEmpleado(empleado);
                
+    }  
+
+    public void verificarUsuario(String usuario) {
+        controlPersis.verificarUsuario(usuario);
     }
     
 }
